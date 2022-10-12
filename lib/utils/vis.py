@@ -46,8 +46,7 @@ def add_joints(image, joints, color, dataset='COCO'):
 
     return image
 
-
-def save_valid_image(image, joints, file_name, dataset='COCO'):
+def save_valid_image(image, joints, file_name, dataset='COCO', save=False):
     image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
 
     for person in joints:
@@ -55,7 +54,10 @@ def save_valid_image(image, joints, file_name, dataset='COCO'):
         color = [int(i) for i in color]
         add_joints(image, person, color, dataset=dataset)
 
-    cv2.imwrite(file_name, image)
+    if save:
+        cv2.imwrite(file_name, image)
+
+    return image
 
 
 def make_heatmaps(image, heatmaps):

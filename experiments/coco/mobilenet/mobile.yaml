@@ -23,7 +23,7 @@ DATASET:
   MAX_TRANSLATE: 40
   MIN_SCALE: 0.75
   NUM_JOINTS: 17
-  ROOT: '/dataset/coco'
+  ROOT: 'data/coco'
   TEST: val2017
   TRAIN: train2017
 DEBUG:
@@ -57,7 +57,7 @@ MODEL:
   INIT_WEIGHTS: True
   NAME: pose_mobilenet
   NUM_JOINTS: 17
-  PRETRAINED: ''
+  PRETRAINED: 'coco-pretrain.pth.tar'
   TAG_PER_JOINT: True
 TEST:
   FLIP_TEST: True

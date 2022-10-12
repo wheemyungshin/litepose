@@ -86,7 +86,7 @@ class CocoDataset(Dataset):
             )
 
     def _get_image_path(self, file_name):
-        images_dir = os.path.join(self.root, 'images')
+        images_dir = self.root
         dataset = 'test2017' if 'test' in self.dataset else self.dataset
         if self.data_format == 'zip':
             return os.path.join(images_dir, dataset) + '.zip@' + file_name

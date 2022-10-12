@@ -43,7 +43,6 @@ from utils.utils import get_optimizer
 from utils.utils import save_checkpoint
 from utils.utils import setup_logger
 from utils.utils import get_model_summary
-from scheduler import WarmupMultiStepLR
 from arch_manager import ArchManager
 
 def parse_args():
